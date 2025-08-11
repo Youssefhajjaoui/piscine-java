@@ -4,6 +4,6 @@ public class Palindrome {
             return false;
         }
         StringBuilder name = new StringBuilder(s);
-        return s.toLowerCase() == name.reverse().toString().toLowerCase();
+        return name.reverse().toString().toLowerCase().compareTo(s.toLowerCase()) == 0;
     }
 }
