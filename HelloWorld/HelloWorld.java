@@ -1,7 +1,7 @@
-package HelloWorld;
+// package HelloWorld;
 
 public class HelloWorld {
     public static String helloWorld() {
-        return "Hello world !";
+        return "Hello World !";
     }
 }
