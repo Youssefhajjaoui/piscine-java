@@ -65,8 +65,8 @@ public class CelestialObject {
         return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
     }
 
-    public boolean equals(CelestialObject first, CelestialObject other) {
-        return first.x == other.x && first.y == other.y && first.z == other.z;
+    public boolean equals(CelestialObject other) {
+        return this.x == other.x && this.y == other.y && this.z == other.z;
     }
 
     public int hashCode() {
