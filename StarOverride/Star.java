@@ -31,16 +31,14 @@ public class Star extends CelestialObject {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
         if (obj == null || getClass() != obj.getClass())
             return false;
         Star other = (Star) obj;
         return Double.compare(this.x, other.x) == 0 &&
-               Double.compare(this.y, other.y) == 0 &&
-               Double.compare(this.z, other.z) == 0 &&
-               Double.compare(this.magnitude, other.magnitude) == 0 &&
-               Objects.equals(this.name, other.name);
+                Double.compare(this.y, other.y) == 0 &&
+                Double.compare(this.z, other.z) == 0 &&
+                Double.compare(this.magnitude, other.magnitude) == 0 &&
+                Objects.equals(this.name, other.name);
     }
 
     @Override
