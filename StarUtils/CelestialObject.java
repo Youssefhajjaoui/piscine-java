@@ -61,16 +61,14 @@ public class CelestialObject {
         return first.getDistanceBetween(first, other) * 150000000;
     }
 
-    @Override
     public String toString() {
         return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
     }
 
-    public boolean equals(CelestialObject other) {
-        return this.x == other.x && this.y == other.y && this.z == other.z;
+    public boolean equals(CelestialObject first, CelestialObject other) {
+        return first.x == other.x && first.y == other.y && first.z == other.z;
     }
 
-    @Override
     public int hashCode() {
         return Objects.hash(this.x, this.y, this.z);
     }
