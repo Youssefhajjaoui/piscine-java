@@ -1,8 +1,11 @@
+import java.util.Objects;
+
 public class CelestialObject {
     public double x;
     public double y;
     public double z;
     public String name;
+    public static int KM_IN_ONE_AU = 150000000;
 
     public CelestialObject() {
         this.name = "Soleil";
@@ -46,12 +49,30 @@ public class CelestialObject {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static double getDistanceBetween(CelestialObject first, CelestialObject other) {
+        return Math.sqrt(
+                Math.pow((first.getX() - other.getX()), 2) + Math.pow((first.getY() - other.getY()), 2)
+                        + Math.pow((first.getZ() - other.getZ()), 2));
+    }
+
+    public static double getDistanceBetweenInKm(CelestialObject first, CelestialObject other) {
+        return first.getDistanceBetween(first, other) * 150000000;
+    }
+
+    public String toString() {
+        return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
+    }
+
+    public boolean equals(CelestialObject other) {
+        if (other == null) {
+            return false;
+        }
+        return this.x == other.x && this.y == other.y && this.z == other.z && this.name == other.name;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.x, this.y, this.z, this.name);
+    }
 }
-
-// getX and setX for the x property
-
-// getY and setY for the y property
-
-// getZ and setZ for the z property
-
-// getName and setName for the name property
