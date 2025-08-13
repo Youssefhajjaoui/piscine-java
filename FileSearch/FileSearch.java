@@ -14,7 +14,7 @@ public class FileSearch {
                     .findFirst();
 
             return found.map(Path::toString)
-                    .orElse("File not found");
+                    .orElse(null);
         } catch (IOException e) {
             return e.toString();
         }
