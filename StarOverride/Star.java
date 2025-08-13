@@ -33,7 +33,7 @@ public class Star extends CelestialObject {
         if (other == null) {
             return false;
         }
-        return this.x == other.x && this.y == other.y && this.z == other.z && this.name == other.name
+        return this.x == other.x && this.y == other.y && this.z == other.z && this.name.equals(other.name)
                 && this.magnitude == other.magnitude;
     }
 
