@@ -70,6 +70,6 @@ public class CelestialObject {
     }
 
     public int hashCode() {
-        return Objects.hash(this.x, this.y, this.z);
+        return Objects.hash(this.x, this.y, this.z, this.name);
     }
 }
