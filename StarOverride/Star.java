@@ -25,7 +25,7 @@ public class Star extends CelestialObject {
     }
 
     public int hashCode() {
-        return Objects.hash(this.x, this, y, this.z, this.name, this.magnitude);
+        return Objects.hash(this.magnitude);
     }
 
     public boolean equals(Star other) {
