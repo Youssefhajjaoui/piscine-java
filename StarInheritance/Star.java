@@ -4,4 +4,8 @@ public class Star extends CelestialObject {
     public double getMagnitude() {
         return this.magnitude;
     }
+
+    public void setMagnitude(double magnetique) {
+        this.magnitude = magnetique;
+    }
 }
