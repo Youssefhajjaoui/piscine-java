@@ -5,9 +5,11 @@ public class Planet extends CelestialObject {
 
     public Planet() {
         super();
+        this.centerStar = new Star();
     }
 
     public Planet(String name, double x, double y, double z, Star centerStar) {
+        super();
         this.name = name;
         this.centerStar = centerStar;
         this.x = x;
@@ -26,6 +28,12 @@ public class Planet extends CelestialObject {
     @Override
     public int hashCode() {
         return Objects.hash(this.x, this.y, this.z, this.name, this.centerStar);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s circles around %s at the %.3f AU", this.name, this.centerStar.name,
+                CelestialObject.getDistanceBetween(this, this.getCenterStar()));
     }
 
     @Override
