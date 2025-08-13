@@ -8,7 +8,9 @@ public class Cat {
         for (String path : args) {
             Path p = Paths.get(path);
             byte[] bytes = Files.readAllBytes(p);
-            System.out.print(bytes);
+            OutputStream stdout = System.out;
+            stdout.write(bytes);
+            stdout.flush();
         }
     }
 }
