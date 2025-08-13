@@ -7,6 +7,7 @@ public class Star extends CelestialObject {
     public Star() {
         // super();
     }
+
     public Star(String name, double x, double y, double z, double magnitude) {
         this.x = x;
         this.y = y;
@@ -14,6 +15,7 @@ public class Star extends CelestialObject {
         this.name = name;
         this.magnitude = magnitude;
     }
+
     public double getMagnitude() {
         return this.magnitude;
     }
@@ -21,8 +23,6 @@ public class Star extends CelestialObject {
     public void setMagnitude(double magnetique) {
         this.magnitude = magnetique;
     }
-
-
 
     @Override
     public int hashCode() {

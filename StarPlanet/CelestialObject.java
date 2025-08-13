@@ -69,7 +69,7 @@ public class CelestialObject {
         if (other == null) {
             return false;
         }
-        
+
         CelestialObject obj = (CelestialObject) other;
         return this.x == obj.x && this.y == obj.y && this.z == obj.z && this.name == obj.name;
     }
