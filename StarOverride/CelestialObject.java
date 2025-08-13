@@ -75,4 +75,9 @@ public class CelestialObject {
     public int hashCode() {
         return Objects.hash(this.x, this.y, this.z, this.name);
     }
+
+    public boolean equals(Star other) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'equals'");
+    }
 }

@@ -2,7 +2,7 @@
 import java.util.Objects;
 
 public class Star extends CelestialObject {
-    public double magnitude;
+    private double magnitude;
 
     public double getMagnitude() {
         return this.magnitude;
@@ -26,19 +26,16 @@ public class Star extends CelestialObject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.magnitude, this.x, this.y, this.z, this.name);
+        return Objects.hash(this.x, this.y, this.z, this.name, this.magnitude);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null || getClass() != obj.getClass())
+    public boolean equals(Star other) {
+        if (other == null) {
             return false;
-        Star other = (Star) obj;
-        return Double.compare(this.x, other.x) == 0 &&
-                Double.compare(this.y, other.y) == 0 &&
-                Double.compare(this.z, other.z) == 0 &&
-                Double.compare(this.magnitude, other.magnitude) == 0 &&
-                Objects.equals(this.name, other.name);
+        }
+        return this.x == other.x && this.y == other.y && this.z == other.z && this.name.equals(other.name)
+                && this.magnitude == other.magnitude;
     }
 
     @Override
