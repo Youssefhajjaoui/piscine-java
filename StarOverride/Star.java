@@ -29,14 +29,21 @@ public class Star extends CelestialObject {
         return Objects.hash(this.x, this.y, this.z, this.name, this.magnitude);
     }
 
-    public boolean equals(Star other) {
-        if (other == null) {
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
             return false;
-        }
-        return this.x == other.x && this.y == other.y && this.z == other.z && this.name.equals(other.name)
-                && this.magnitude == other.magnitude;
+        Star other = (Star) obj;
+        return Double.compare(this.x, other.x) == 0 &&
+               Double.compare(this.y, other.y) == 0 &&
+               Double.compare(this.z, other.z) == 0 &&
+               Double.compare(this.magnitude, other.magnitude) == 0 &&
+               Objects.equals(this.name, other.name);
     }
 
+    @Override
     public String toString() {
         return String.format("%s shines at the %.3f magnitude", this.name, this.magnitude);
     }
