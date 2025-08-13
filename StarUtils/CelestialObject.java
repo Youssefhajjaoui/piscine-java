@@ -66,9 +66,13 @@ public class CelestialObject {
     }
 
     public boolean equals(CelestialObject other) {
+        if (other == null) {
+            return false;
+        }
         return this.x == other.x && this.y == other.y && this.z == other.z;
     }
 
+    @Override
     public int hashCode() {
         return Objects.hash(this.x, this.y, this.z, this.name);
     }
