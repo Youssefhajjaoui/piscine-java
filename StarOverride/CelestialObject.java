@@ -64,20 +64,17 @@ public class CelestialObject {
         return String.format("%s is positioned at (%.3f, %.3f, %.3f)", this.name, this.x, this.y, this.z);
     }
 
-    public boolean equals(CelestialObject other) {
+    @Override
+    public boolean equals(Object other) {
         if (other == null) {
             return false;
         }
-        return this.x == other.x && this.y == other.y && this.z == other.z && this.name == other.name;
+        CelestialObject obj = (CelestialObject) other;
+        return this.x == obj.x && this.y == obj.y && this.z == obj.z && this.name == obj.name;
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(this.x, this.y, this.z, this.name);
-    }
-
-    public boolean equals(Star other) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'equals'");
     }
 }
