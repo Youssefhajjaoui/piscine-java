@@ -69,7 +69,7 @@ public class CelestialObject {
         if (other == null) {
             return false;
         }
-        return this.x == other.x && this.y == other.y && this.z == other.z;
+        return this.x == other.x && this.y == other.y && this.z == other.z && this.name == other.name;
     }
 
     @Override
