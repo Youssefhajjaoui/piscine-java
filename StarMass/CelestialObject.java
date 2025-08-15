@@ -27,11 +27,11 @@ public class CelestialObject {
         this.mass = mass;
     }
 
-    public Integer getMass() {
-        return this.mass;
+    public String getMass() {
+        return String.valueOf(this.mass);
     }
 
-    public void SetMass(Integer mass) {
+    public void SetMass(int mass) {
         this.mass = mass;
     }
 
