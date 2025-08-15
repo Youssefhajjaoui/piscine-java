@@ -31,7 +31,7 @@ public class Galaxy {
             } else {
                 type = "Other";
             }
-            result.put(type, result.get(type) + obj.getMass());
+            result.put(type, result.get(type) + Integer.parseInt(obj.getMass()));
         }
 
         return result;
