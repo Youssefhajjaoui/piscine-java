@@ -24,7 +24,7 @@ public class Character {
        return this.name; 
      }
 
-     publid int getCurrentHealth(){
+     public int getCurrentHealth(){
      	return this.currentHealth;
      }
 
