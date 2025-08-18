@@ -28,6 +28,11 @@ public class Character {
      	return this.currentHealth;
      }
 
+     public int getMaxHealth(){
+	return this.maxHealth;
+
+     }
+
      public void takeDamage(int damage){
      	this.currentHealth -= damage;
      }
