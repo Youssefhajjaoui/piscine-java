@@ -1,4 +1,5 @@
 public interface Healer {
-	public void heal(Character other);
+	public void heal(Character other) throws DeadCharacterException;
+
 	public int getHealCapacity();
 }

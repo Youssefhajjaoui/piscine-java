@@ -63,9 +63,9 @@ public abstract class Character {
 
 	}
 
-	public abstract void takeDamage(int damage);
+	public abstract void takeDamage(int damage) throws DeadCharacterException;
 
-	public abstract void attack(Character other);
+	public abstract void attack(Character other) throws DeadCharacterException;
 
 	public static Character fight(Character first, Character second) {
 		while (first.currentHealth != 0 && second.currentHealth != 0) {
