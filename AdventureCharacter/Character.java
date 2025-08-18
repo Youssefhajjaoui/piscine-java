@@ -1,8 +1,8 @@
 
 public class Character {
-	private int maxHealth;
+	private final int maxHealth;
 	private int currentHealth;
-	private String name;
+	private final String name;
 
      public Character(String name, int maxHealth){
 	     this.name = name;
@@ -18,6 +18,14 @@ public class Character {
 	}else{
 	  return String.format("%s : KO" , this.name);
 	}
+     }
+
+     public String getName(){
+       return this.name; 
+     }
+
+     publid int getCurrentHealth(){
+     	return this.currentHealth;
      }
 
      public void takeDamage(int damage){
