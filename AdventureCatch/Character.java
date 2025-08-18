@@ -69,9 +69,14 @@ public abstract class Character {
 
 	public static Character fight(Character first, Character second) {
 		while (first.currentHealth != 0 && second.currentHealth != 0) {
-			first.attack(second);
-			if (second.currentHealth != 0) {
-				second.attack(first);
+			try {
+				first.attack(second);
+				if (second.currentHealth != 0) {
+					second.attack(first);
+				}
+
+			} catch (DeadCharacterException e) {
+				System.out.println(e.getMessage());
 			}
 		}
 		if (first.currentHealth == 0) {
