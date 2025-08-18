@@ -37,7 +37,7 @@ public class Character {
 		for (Character character : allCharacters) {
 			s.append(String.format("- %s\n", character.toString()));
 		}
-		s.append("------------------------------------------\n");
+		s.append("------------------------------------------");
 		return s.toString();
 	}
 
