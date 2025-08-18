@@ -50,9 +50,9 @@ public abstract class Character {
 
 	}
 
-	abstract void takeDamage(int damage);
+	public abstract void takeDamage(int damage);
 
-	abstract void attack(Character other);
+	public abstract void attack(Character other);
 
 	public static Character fight(Character first, Character second) {
 		while (first.currentHealth != 0 && second.currentHealth != 0) {
@@ -69,18 +69,17 @@ public abstract class Character {
 	}
 
 	public void addCurrentHealth(int heal) {
-    		this.currentHealth += heal;
-    		if (this.currentHealth > this.maxHealth) {
-        		this.currentHealth = this.maxHealth;
-    		}
-    		if (this.currentHealth < 0) {
-        		this.currentHealth = 0;
-    		}
+		this.currentHealth += heal;
+		if (this.currentHealth > this.maxHealth) {
+			this.currentHealth = this.maxHealth;
+		}
+		if (this.currentHealth < 0) {
+			this.currentHealth = 0;
+		}
 	}
 
-	protected void setCurrentHealth(int heal){
+	protected void setCurrentHealth(int heal) {
 		this.currentHealth = (heal < 0) ? 0 : heal;
 	}
-
 
 }
