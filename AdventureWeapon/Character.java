@@ -13,6 +13,7 @@ public abstract class Character {
 		this.maxHealth = maxHealth;
 		this.currentHealth = maxHealth;
 		this.weapon = weapon;
+		allCharacters.add(this);
 	}
 
 	public Character(String name, int maxHealth) {

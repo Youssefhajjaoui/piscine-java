@@ -11,20 +11,21 @@ public class Monster extends Character {
 	@Override
 	public String toString() {
 		if (this.getCurrentHealth() == 0) {
-			return String.format("%s is a monster and is dead", this.getName());
+			return String.format("%s is a monster and is dead. %s", this.getName(), this.weapon.toString());
 		} else {
-			return String.format("%s is a monster with %d HP", this.getName(), this.getCurrentHealth());
+			return String.format("%s is a monster with %d HP. %s", this.getName(), this.getCurrentHealth(),
+					this.weapon.toString());
 		}
 	}
 
 	@Override
 	public void attack(Character other) {
-		if (other.weapon != null) {
-			other.takeDamage(this.weapon.getDamage());
+		// if (other.weapon != null) {
+		other.takeDamage(this.weapon.getDamage());
 
-		} else {
-			other.takeDamage(7);
-		}
+		// } else {
+		// other.takeDamage(7);
+		// }
 	}
 
 	@Override

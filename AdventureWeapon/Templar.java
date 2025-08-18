@@ -32,22 +32,21 @@ public class Templar extends Character implements Tank, Healer {
 	@Override
 	public String toString() {
 		if (this.getCurrentHealth() != 0) {
-			return String.format("%s is a strong Templar with %d HP. It can heal %d HP and has a shield of %d.",
-					this.getName(), this.getCurrentHealth(), this.healCapacity, this.shield);
+			return String.format("%s is a strong Templar with %d HP. It can heal %d HP and has a shield of %d. %s",
+					this.getName(), this.getCurrentHealth(), this.healCapacity, this.shield, this.weapon.toString());
 		} else {
-			return String.format("%s has been beaten, even with its %d shield. So bad, it could heal %d HP.",
-					this.getName(), this.shield, this.healCapacity);
+			return String.format("%s has been beaten, even with its %d shield. So bad, it could heal %d HP. %s",
+					this.getName(), this.shield, this.healCapacity, this.weapon.toString());
 		}
 	}
 
 	@Override
 	public void attack(Character other) {
-		if (other.weapon != null) {
-			other.takeDamage(this.weapon.getDamage());
-
-		} else {
-			other.takeDamage(6);
-		}
+		// if (this.weapon != null) {
+		other.takeDamage(this.weapon.getDamage());
+		// } else {
+		// other.takeDamage(6);
+		// }
 		this.heal(this);
 	}
 
