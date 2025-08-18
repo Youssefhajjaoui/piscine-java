@@ -80,7 +80,6 @@ public abstract class Character {
 
 	protected void setCurrentHealth(int heal){
 		this.currentHealth = (heal < 0) ? 0 : heal;
-
 	}
 
 
