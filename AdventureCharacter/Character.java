@@ -4,45 +4,45 @@ public class Character {
 	private int currentHealth;
 	private final String name;
 
-     public Character(String name, int maxHealth){
-	     this.name = name;
-	     this.maxHealth = maxHealth;
-	     this.currentHealth = maxHealth;
-     }
-
-     @Override
-     public String toString(){
-	System.out.println(this.currentHealth);
-	if (this.currentHealth > 0){
-	  return String.format("%s : %d/%d" , this.name , this.currentHealth , this.maxHealth);
-	}else{
-	  return String.format("%s : KO" , this.name);
+	public Character(String name, int maxHealth) {
+		this.name = name;
+		this.maxHealth = maxHealth;
+		this.currentHealth = maxHealth;
 	}
-     }
 
-     public String getName(){
-       return this.name; 
-     }
-
-     public int getCurrentHealth(){
-     	return this.currentHealth;
-     }
-
-     public int getMaxHealth(){
-	return this.maxHealth;
-
-     }
-
-     public void takeDamage(int damage){
-	if (this.currentHealth - damage <= 0){
-	  this.currentHealth = 0;	
-	}else{
-	  this.currentHealth -= damage;	
+	@Override
+	public String toString() {
+		System.out.println(this.currentHealth);
+		if (this.currentHealth > 0) {
+			return String.format("%s : %d/%d", this.name, this.currentHealth, this.maxHealth);
+		} else {
+			return String.format("%s : KO", this.name);
+		}
 	}
-     }
 
-     public void attack(Character other){
-     	other.takeDamage(9);
-     }
+	public String getName() {
+		return this.name;
+	}
+
+	public int getCurrentHealth() {
+		return this.currentHealth;
+	}
+
+	public int getMaxHealth() {
+		return this.maxHealth;
+
+	}
+
+	public void takeDamage(int damage) {
+		if (this.currentHealth - damage <= 0) {
+			this.currentHealth = 0;
+		} else {
+			this.currentHealth -= damage;
+		}
+	}
+
+	public void attack(Character other) {
+		other.takeDamage(9);
+	}
 
 }
