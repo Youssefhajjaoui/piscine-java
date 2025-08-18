@@ -20,6 +20,6 @@ public class Monster extends Character{
 
 	@Override
 	public void takeDamage(int damage){
-		this.addCurrentHealth(-(int)Math.ceil(damage * 0.8));
+		this.setCurrentHealth(this.getCurrentHealth() - (int) Math.floor(damage * 0.9));
 	}
 }
