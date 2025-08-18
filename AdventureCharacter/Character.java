@@ -34,7 +34,11 @@ public class Character {
      }
 
      public void takeDamage(int damage){
-     	this.currentHealth -= damage;
+	if (this.currentHealth - damage <= 0){
+	  this.currentHealth = 0;	
+	}else{
+	  this.currentHealth -= damage;	
+	}
      }
 
      public void attack(Character other){
