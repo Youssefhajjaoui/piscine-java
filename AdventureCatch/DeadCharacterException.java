@@ -1,4 +1,3 @@
-package AdventureCatch;
 public class DeadCharacterException extends Exception {
     private final Character agent;
 

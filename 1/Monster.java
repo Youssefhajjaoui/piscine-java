@@ -1,3 +1,4 @@
+package AdventureCatch;
 public class Monster extends Character {
 
 	public Monster(String name, int maxHealth) {

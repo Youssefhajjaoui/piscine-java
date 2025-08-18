@@ -1,4 +1,3 @@
-package AdventureCatch;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +6,19 @@ public abstract class Character {
 	private int currentHealth;
 	private final String name;
 	private static List<Character> allCharacters = new ArrayList<>();
+	private Weapon weapon;
+
+	public Weapon getWeapon() {
+		return this.weapon;
+	}
+
+	public Character(String name, int maxHealth, Weapon weapon) {
+		this.name = name;
+		this.maxHealth = maxHealth;
+		this.currentHealth = maxHealth;
+		this.weapon = weapon;
+		allCharacters.add(this);
+	}
 
 	public Character(String name, int maxHealth) {
 		this.name = name;
