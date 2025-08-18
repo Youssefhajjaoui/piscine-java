@@ -1,3 +1,4 @@
+package AdventureCatch;
 public class Templar extends Character implements Tank , Healer{
 	private final int healCapacity;
 	private final int shield;
