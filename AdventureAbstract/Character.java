@@ -78,5 +78,9 @@ public abstract class Character {
     		}
 	}
 
+	public void setCurrentHealth(int heal){
+		this.currentHealth = heal;
+	}
+
 
 }
