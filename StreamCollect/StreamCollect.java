@@ -20,6 +20,6 @@ public class StreamCollect {
 
     public static String orderAndConcatWithSharp(Stream<String> s) {
         return s.sorted()                    
-                .collect(Collectors.joining(" # " , "##{" , "}"));  
+                .collect(Collectors.joining(" # " , "{" , "}"));  
     }
 }
