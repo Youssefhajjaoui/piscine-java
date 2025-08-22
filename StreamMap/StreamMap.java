@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 public class StreamMap {
     public static Integer sumOfStringLength(Stream<String> s) {
-        int val = (int) s.map(V -> V.length()).count();
+        int val = (int) s.map(V -> V.length()).reduce(0, Integer::sum);
         return val;
     }
 
