@@ -16,6 +16,7 @@ public class RegexMatch {
     }
 
     public static boolean containsAtLeast3SuccessiveA(String s) {
-        return !Pattern.matches(".*a{3,}.*", s);
+        return s.matches(".*[A]{3,}.*");
     }
+
 }
