@@ -30,9 +30,9 @@ public class RegexReplace {
 
         // --- handle domain ---
         String[] domainParts = domain.split("\\.");
-        if (domainParts.length == 3) {
-            domainParts[0] = "*".repeat(domainParts[0].length());
-            domainParts[1] = "*".repeat(domainParts[1].length());
+        if (domainParts.length >= 3) {
+            domainParts[0] = "*".repeat(domainParts[0].length()); // hide first
+            domainParts[domainParts.length - 1] = "*".repeat(domainParts[domainParts.length - 1].length()); // hide last
         } else if (domainParts.length == 2) {
             String tld = domainParts[1];
             if (!(tld.equals("com") || tld.equals("org") || tld.equals("net"))) {
