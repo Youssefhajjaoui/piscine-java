@@ -21,8 +21,7 @@ public class DifferenceBetweenDate {
     public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1, LocalDateTime dateTime2) {
         if (dateTime1 == null || dateTime2 == null)
             return null;
-        if (dateTime1.isBefore(dateTime2)) {
-
+        if (dateTime1.isAfter(dateTime2)) {
             return Duration.between(dateTime2, dateTime1).toHours();
         } else {
             return Duration.between(dateTime1, dateTime2).toHours();
