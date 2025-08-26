@@ -24,15 +24,15 @@ public class RegexReplace {
             }
         } else {
             if (username.length() > 3) {
-                username = username.substring(0, username.length() - 3) + "***";
+                username = username.substring(0, 3) + "*".repeat(username.length() - 3);
             }
         }
 
         // --- handle domain ---
         String[] domainParts = domain.split("\\.");
         if (domainParts.length == 3) {
-            domainParts[0] = "***"; // hide third-level
-            domainParts[2] = "***"; // hide TLD
+            domainParts[0] = "*".repeat(domainParts[0].length());
+            domainParts[1] = "*".repeat(domainParts[1].length());
         } else if (domainParts.length == 2) {
             String tld = domainParts[1];
             if (!(tld.equals("com") || tld.equals("org") || tld.equals("net"))) {
