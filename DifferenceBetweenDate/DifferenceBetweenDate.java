@@ -7,7 +7,7 @@ import java.time.Period;
 public class DifferenceBetweenDate {
 
     public static Duration durationBetweenTime(LocalTime localTime1, LocalTime localTime2) {
-        return durationBetweenTime(localTime1, localTime2);
+        return Duration.between(localTime2, localTime1);
     }
 
     public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
