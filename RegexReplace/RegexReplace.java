@@ -1,6 +1,6 @@
 public class RegexReplace {
     public static String removeUnits(String s) {
-        return s.replaceAll("(?<=\\d)(cm|€)(?= )", "");
+        return s.replaceAll("(?<=\\d)(cm|€)(?=\\s*)", "");
 
     }
 
