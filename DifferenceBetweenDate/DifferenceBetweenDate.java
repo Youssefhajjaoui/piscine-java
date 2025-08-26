@@ -15,7 +15,12 @@ public class DifferenceBetweenDate {
     public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
         if (date1 == null || date2 == null)
             return null;
-        return Period.between(date1, date2);
+        if (date1.isBefore(date2)) {
+            return Period.between(date1, date2);
+
+        } else {
+            return Period.between(date2, date1);
+        }
     }
 
     public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1, LocalDateTime dateTime2) {
