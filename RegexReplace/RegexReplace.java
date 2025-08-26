@@ -38,6 +38,8 @@ public class RegexReplace {
             if (!(tld.equals("com") || tld.equals("org") || tld.equals("net"))) {
                 domainParts[0] = "***";
                 domainParts[1] = "***";
+            } else {
+                domainParts[0] = "*".repeat(domainParts[0].length());
             }
         }
 
