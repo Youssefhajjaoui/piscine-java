@@ -3,10 +3,10 @@ public class Excalibur {
     String name;
     private static Excalibur instance;
 
-    public Excalibur() {
+    private Excalibur() {
     }
 
-    public Excalibur(String name) {
+    private Excalibur(String name) {
         this.name = name;
     }
 
