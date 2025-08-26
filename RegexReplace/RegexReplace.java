@@ -36,8 +36,8 @@ public class RegexReplace {
         } else if (domainParts.length == 2) {
             String tld = domainParts[1];
             if (!(tld.equals("com") || tld.equals("org") || tld.equals("net"))) {
-                domainParts[0] = "***";
-                domainParts[1] = "***";
+                domainParts[0] = "*".repeat(domainParts[0].length());
+                domainParts[1] = "*".repeat(domainParts[1].length());
             } else {
                 domainParts[0] = "*".repeat(domainParts[0].length());
             }
