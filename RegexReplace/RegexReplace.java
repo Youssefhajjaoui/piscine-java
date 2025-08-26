@@ -16,7 +16,7 @@ public class RegexReplace {
 
         // --- handle username ---
         if (username.contains(".") || username.contains("-") || username.contains("_")) {
-            String[] userParts = username.split("[.-_]", 2);
+            String[] userParts = username.split("[._-]", 2);
             if (userParts.length == 2) {
                 char sep = username.charAt(userParts[0].length());
                 String stars = "*".repeat(userParts[1].length());
